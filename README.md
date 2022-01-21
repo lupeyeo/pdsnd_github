@@ -4,10 +4,13 @@
 21.01.2022
 
 ### Project Title
-Replace the Project Title
+Bikeshare Analysis
 
 ### Description
-Describe what your project is about and what it does
+In this project, I used Python analysed the data provided by bikeshare. This includes bikes usage data from three different cities: Chicago, New York City, and Washington.
+The program prompts the user to state which city should be analysed and what month and day of the week should be filtered. Further, the user is able to then determine whether the first
+five rows of the raw data should be displayed and whether they want to scroll down by iterations of five. Lastly, the program displays a multitude of statistics about the bike usage according
+to the filters selected.
 
 ### Files used
 Include the files used
