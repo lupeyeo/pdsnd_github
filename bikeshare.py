@@ -87,6 +87,7 @@ def load_data(city, month, day):
 def display_data(df):
     """Displays raw data in iterations of 5 rows. When prompted, user can view the next 5 rows."""
     # Ask for user input
+    pd.set_option('display.max_columns',200)
     show_data = str(input('Do you wish to see the raw data? Enter "yes" or "no": ').title())
     index_top_rows = 0
     index_bottom_rows = 5
