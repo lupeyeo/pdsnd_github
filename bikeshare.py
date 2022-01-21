@@ -26,7 +26,7 @@ def get_filters():
             print('ok')
             break
         else:
-            print('City not found.')
+            print('City not found, please try again.')
 
         # Get user input for month (all, january, february, ... , june)
     month_list = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
