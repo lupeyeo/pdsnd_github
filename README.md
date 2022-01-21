@@ -16,4 +16,10 @@ to the filters selected.
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://docs.python.org/3/tutorial/errors.html
+https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+https://stackoverflow.com/questions/12319733/python-not-showing-decimals
+https://stackoverflow.com/questions/32553941/how-to-redo-an-input-if-user-enters-invalid-answer
+https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
+https://docs.python.org/3/library/time.html
+https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.month_name.html
