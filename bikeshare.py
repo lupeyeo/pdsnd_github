@@ -101,6 +101,7 @@ def display_data(df):
             index_top_rows += 5
             index_bottom_rows += 5
 
+    # Give feedback to user that "no" has been determined and the program is moving on.
     print("Okay, let's move on.")
 
 def time_stats(df):
