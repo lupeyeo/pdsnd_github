@@ -73,7 +73,7 @@ def load_data(city, month, day):
     df['Start Time Month'] = pd.DatetimeIndex(df['Start Time']).month_name()
     df['Start Time Weekday'] = df['Start Time'].dt.day_name()
     df['Start Time Hour'] = df['Start Time'].dt.hour
-    df['Station Combination'] = df['Start Station'] + " --> " + df['End Station']
+
 
     # Filter applied for month and day. If "all", no filter is applied.
     if month != 'All':
@@ -141,8 +141,8 @@ def station_stats(df):
     print("The most common end station is: {}.".format(most_common_end_station))
 
     # Display most frequent combination of start station and end station trip
-    most_common_station_combination = df['Station Combination'].mode()[0]
-    print("The most common station combination is: {}.".format(most_common_station_combination))
+    most_popular_trip = df.groupby(['Start Station', 'End Station']).size().idxmax()
+    print("The most common station combination is: {}.".format(most_popular_trip))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
