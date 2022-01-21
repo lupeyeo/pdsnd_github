@@ -13,7 +13,9 @@ five rows of the raw data should be displayed and whether they want to scroll do
 to the filters selected.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
 https://docs.python.org/3/tutorial/errors.html
