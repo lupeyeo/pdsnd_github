@@ -26,7 +26,7 @@ def get_filters():
             print('ok')
             break
         else:
-            print('City not found.')
+            print('City not found, please try again.')
 
         # Get user input for month (all, january, february, ... , june)
     month_list = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -73,7 +73,7 @@ def load_data(city, month, day):
     df['Start Time Month'] = pd.DatetimeIndex(df['Start Time']).month_name()
     df['Start Time Weekday'] = df['Start Time'].dt.day_name()
     df['Start Time Hour'] = df['Start Time'].dt.hour
-    df['Station Combination'] = df['Start Station'] + " --> " + df['End Station']
+
 
     # Filter applied for month and day. If "all", no filter is applied.
     if month != 'All':
@@ -87,6 +87,7 @@ def load_data(city, month, day):
 def display_data(df):
     """Displays raw data in iterations of 5 rows. When prompted, user can view the next 5 rows."""
     # Ask for user input
+    pd.set_option('display.max_columns',200)
     show_data = str(input('Do you wish to see the raw data? Enter "yes" or "no": ').title())
     index_top_rows = 0
     index_bottom_rows = 5
@@ -141,8 +142,8 @@ def station_stats(df):
     print("The most common end station is: {}.".format(most_common_end_station))
 
     # Display most frequent combination of start station and end station trip
-    most_common_station_combination = df['Station Combination'].mode()[0]
-    print("The most common station combination is: {}.".format(most_common_station_combination))
+    most_popular_trip = df.groupby(['Start Station', 'End Station']).size().idxmax()
+    print("The most common station combination is: {}.".format(most_popular_trip))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
